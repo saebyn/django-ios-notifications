@@ -32,8 +32,8 @@ class BaseService(models.Model):
     """
     A base service class intended to be subclassed.
     """
-    name = models.CharField(max_length=255)
-    hostname = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
+    hostname = models.CharField(max_length=255)
     PORT = 0  # Should be overriden by subclass
     connection = None
 
